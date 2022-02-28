@@ -123,11 +123,11 @@ def confirm(request):
         user.save()
         context = {
             'message_type': 'success',
-            'message': 'Вы успешно прошли активацию!!!'
+            'message': 'Спасибо что потвердили человечность!!!'
         }
     except:
         context = {
             'message_type': 'danger',
-            'message': 'Что то пошло не так, приходите завтра'
+            'message': 'Да Вы молодой человек, мошенник!!!!'
         }
     return render(request, 'message.html', context=context)
